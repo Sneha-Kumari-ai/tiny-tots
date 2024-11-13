@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiny Tots - Learning Basics</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #e8d4a1, #c0a98d);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    header {
+      padding: 20px;
+      color: #6b4226;
+      width: 100%;
+      text-align: center;
+      background-color: #f1e0c6;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 1200px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      width: 100%;
+    }
+
+    .section-card {
+      background: #d7b49e;
+      color: #6b4226;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .section-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .section-card p {
+      margin-top: 5px;
+      font-size: 1.1em;
+    }
+
+    .section-card:hover {
+      transform: scale(1.05);
+      background: #e5c4b3;
+    }
+
+    .section-card:active {
+      transform: scale(1);
+    }
+
+    @media (min-width: 1024px) {
+      h1 {
+        font-size: 3em;
+      }
+
+      .section-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      .section-card img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .section-card p {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Tiny Tots</h1>
+    <p>Learning made fun for children aged 2-5 years</p>
+  </header>
+  
+  <main>
+    <div class="section-grid">
+      <div class="section-card" onclick="navigateTo('alphabets.html')">
+        <img src="https://c8.alamy.com/comp/2JFHEK9/alphabets-letter-font-set-numbers-colourful-set-in-normal-style-vector-elements-illustration-template-for-web-design-card-sticker-icon-2JFHEK9.jpg" alt="Alphabets" />
+        <a href="alphabets.html">Learn Alphabets</a>
+        <p>Alphabets</p>
+      </div>
+      <div class="section-card" onclick="navigateTo('shapes.html')">
+        <img src="https://pixcap.com/cdn/blog/uploads/large_DI_Rt_Rg_Ls39_N_Kshgzuexbf_Yae_Rmc_cb0fdd21b8.png" alt="Shapes" />
+        <a href="shapes.html">Learn Shapes</a>
+        <p>Shapes</p>
+      </div>
+      <div class="section-card" onclick="navigateTo('colors.html')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWrWQOAfntbxvAVXuZ4C0Pz2axr-bvAZQYKw&s" alt="Colors" />
+        <a href="colors.html">Learn Colors</a>
+        <p>Colors</p>
+      </div>
+      <div class="section-card" onclick="navigateTo('fruits.html')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9_7O2hWEoyYUEyR33RfpVEQi6kVrxkEDmhg&s" alt="Fruits" />
+        <a href="fruits.html">Learn fruits names</a>
+        <p>Fruits</p>
+      </div>
+      <div class="section-card" onclick="navigateTo('vegetables.html')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjecAd5f5LEAODeleDmJEGWrX1JIn5AAPM5A&s" alt="Vegetables" />
+        <a href="vegetables.html">Learn vegetables name </a>
+        <p>Vegetables</p>
+      </div>
+      <div class="section-card" onclick="navigateTo('seasons.html')">
+        <img src="https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-four-seasons-vector-png-image_6881553.png" alt="Seasons" />
+        <a href="seasons.html">Learn about seasons</a>
+        <p>Seasons</p>
+      </div>
+      <div class="section-card" onclick="navigateTo('weeks.html')">
+        <img src="https://png.pngtree.com/png-clipart/20220510/original/pngtree-cute-weekdays-bullet-journal-sign-png-image_7693117.png" alt="Weeks" />
+        <a href="weeks.html">Learn about weeks name</a>
+        <p>Weeks</p>
+      </div>
+      <div class="section-card" onclick="navigateTo('months.html')">
+        <img src="https://promova.com/content/large_months_12f335dbc8.png" alt="Months" />
+        <a href="months.html">Learn months name</a>
+        <p>Months</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
