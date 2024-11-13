@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month Names</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Body styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #d2b48c, #8b5e3c);
+            color: #ffffff;
+        }
+
+        /* Container for content */
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        /* Title styling */
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+
+        /* Description styling */
+        .description {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #f5deb3;
+        }
+
+        /* Month container styling */
+        .months {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Month text styling */
+        .month {
+            font-size: 1.5em;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ffebcd;
+            cursor: pointer;
+            animation: bounce 2s ease infinite;
+        }
+
+        /* Bouncing effect */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Hover effect for the month names */
+        .month:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Month Names</h1>
+        <p class="description">Discover the months of the year along with their unique characteristics and significance.</p>
+        <div class="months">
+            <div class="month">January - The beginning of a new year.</div>
+            <div class="month">February - The shortest month, symbolizing love.</div>
+            <div class="month">March - The arrival of spring.</div>
+            <div class="month">April - Blooming flowers and growth.</div>
+            <div class="month">May - Warmer days and nature's beauty.</div>
+            <div class="month">June - The start of summer and longer days.</div>
+            <div class="month">July - Peak of summer with sunshine.</div>
+            <div class="month">August - Vacation and relaxation.</div>
+            <div class="month">September - Beginning of autumn.</div>
+            <div class="month">October - Falling leaves and Halloween.</div>
+            <div class="month">November - The season of gratitude.</div>
+            <div class="month">December - Winter and holiday season.</div>
+        </div>
+    </div>
+</body>
+</html>
