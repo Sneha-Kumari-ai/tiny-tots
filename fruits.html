@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits Name Learning</title>
+    <style>
+        /* Body style */
+        body {
+            background-color: #D2B48C; /* Light-dark brown color */
+            font-family: Arial, sans-serif;
+            color: #4B2E2E;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container for content */
+        .container {
+            max-width: 1200px;
+            width: 95%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Header style */
+        h1 {
+            color: #4B2E2E;
+            font-size: 3em;
+            margin: 20px 0;
+        }
+
+        /* Grid container for fruits */
+        .fruits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Fruit section */
+        .fruit {
+            background-color: #A0522D; /* Darker brown color for each section */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        /* Fruit image styling */
+        .fruit img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 3px solid #4B2E2E;
+        }
+
+        /* Fruit name styling */
+        .fruit-name {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        /* Hover effect for bounce */
+        .fruit:hover {
+            transform: scale(1.05); /* Slight scale-up on hover */
+        }
+
+        /* Click (active) bounce effect */
+        .fruit:active {
+            animation: bounce 0.3s ease;
+        }
+
+        /* Bounce animation */
+        @keyframes bounce {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0.9); /* Slight compression to simulate bounce */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fruits Name Learning</h1>
+
+        <div class="fruits-grid">
+            <!-- Apple Section -->
+            <div class="fruit">
+                <img src="https://t3.ftcdn.net/jpg/08/60/33/92/360_F_860339298_C0zkE37kzf3zfBi6pSUEBAa3W17AeiiJ.jpg" alt="Apple">
+                <div class="fruit-name">Apple</div>
+            </div>
+
+            <!-- Banana Section -->
+            <div class="fruit">
+                <img src="https://freedesignfile.com/image/preview/4759/bananas-clipart.png" alt="Banana">
+                <div class="fruit-name">Banana</div>
+            </div>
+
+            <!-- Orange Section -->
+            <div class="fruit">
+                <img src="https://img.freepik.com/premium-vector/cartoon-orange-vector-illustration-white-background_1138841-7251.jpg?semt=ais_hybrid" alt="Orange">
+                <div class="fruit-name">Orange</div>
+            </div>
+
+            <!-- Mango Section -->
+            <div class="fruit">
+                <img src="https://www.shutterstock.com/image-vector/fresh-mango-on-white-background-260nw-1671603250.jpg" alt="Mango">
+                <div class="fruit-name">Mango</div>
+            </div>
+
+            <!-- Strawberry Section -->
+            <div class="fruit">
+                <img src="https://imgs.search.brave.com/AtqunEfFC8k6P4N1PldMDU6wTQanepqfuXeSoDKysp0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNjky/NTQyMzk0L3Bob3Rv/L3N0cmF3YmVycnku/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PVlMUUgyb2hjdkVJ/M0hCWDNlenJ6Vkoy/RFlSMndla2RKNnNz/YjZ5RjZiOTA9" alt="Strawberry">
+                <div class="fruit-name">Strawberry</div>
+            </div>
+
+            <!-- Grapes Section -->
+            <div class="fruit">
+                <img src="https://imgs.search.brave.com/3hN7BznBFzNqo6g6aWLb7119gofMOL4l4_NndTA8g8o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTU3/NTAzNzU5L3Bob3Rv/L2dyYXBlcy5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9VlFJ/cWlwanBkWWFCVUhX/QXdjMU41ekkwX0N0/OVlOcmhCQkRVZHly/YlppMD0" alt="Grapes">
+                <div class="fruit-name">Grapes</div>
+            </div>
+
+            <!-- Pineapple Section -->
+            <div class="fruit">
+                <img src="https://imgs.search.brave.com/LKkxIhNM-vGJ1O2z2fC2fQYwx8_pMhByM7CDF8gsC-4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNDUy/MzUyMjMxL3Bob3Rv/L3BpbmVhcHBsZS5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/QmlvRHdTZEJQTWxD/cGM1NjM4OXk5SlVz/QUpGR1hrazVncjE0/UjRoeGlrWT0" alt="Pineapple">
+                <div class="fruit-name">Pineapple</div>
+            </div>
+
+            <!-- Watermelon Section -->
+            <div class="fruit">
+                <img src="https://imgs.search.brave.com/n815OOkZpfnRGKGISRoNewwENfKKqTuoJUhHrWtxNeI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTU3/Mzc0NzgwL3Bob3Rv/L3dhdGVybWVsb24u/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PUI5U00xV2lkSjk3/Q2ZRaXNpWXBFNV9l/bUtHdHZwZUhEZVlD/NGFtSlNaZU09" alt="Watermelon">
+                <div class="fruit-name">Watermelon</div>
+            </div>
+
+            <!-- Cherry Section -->
+            <div class="fruit">
+                <img src="https://imgs.search.brave.com/iIxJyZCZg0LMs1fPPKTWNYJlWDCc-DYCGT2ler_z4oM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTMx/OTk1OTM4L3Bob3Rv/L2NoZXJyeS5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9SURm/aE9QTWhCbHJNVnRi/TFhWRWpFUFp0X1Jz/ZXRqZzAyd3JYVnBD/YkJ2ND0" alt="Cherry">
+                <div class="fruit-name">Cherry</div>
+            </div>
+
+            <!-- Kiwi Section -->
+            <div class="fruit">
+                <img src="https://imgs.search.brave.com/xWwUgcMtCkhN_-hiYTzJP3zJTBRX8w3tAJwgs5ozJ4w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTU3/NjczNjk4L3Bob3Rv/L2tpd2kuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPVp4LXln/OW5wSGV5MzVOVWx1/SEhfeUJWYlg1VGVu/UXptR1VSY19pX0hs/d1k9" alt="Kiwi">
+                <div class="fruit-name">Kiwi</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
