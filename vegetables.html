@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegetables Name Learning</title>
+  <style>
+    /* Reset some default styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fullscreen body setup */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #D0B097; /* light brown background */
+      color: #4B3C2A; /* dark brown text color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden; /* Hide overflow */
+      flex-direction: column;
+      padding: 20px; /* Adds some space around the page */
+    }
+
+    /* Styling for the title */
+    h1 {
+      font-size: 4.5rem; /* Larger font size */
+      margin-bottom: 50px;
+      text-align: center;
+      font-weight: bold;
+      color: #4B3C2A;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the text for better visibility */
+    }
+
+    /* Container for vegetables */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      padding: 30px;
+      border-radius: 15px;
+      background-color: #F5E6D3;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      overflow: auto;
+    }
+
+    /* Vegetable grid setup */
+    .vegetable-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Larger grid items */
+      gap: 40px; /* Increased gap */
+      padding: 20px;
+      width: 100%;
+      justify-items: center;
+    }
+
+    /* Individual vegetable item styling */
+    .vegetable {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      border: 3px solid #4B3C2A;
+      border-radius: 15px;
+      background-color: #FFF; /* Light background to separate each section */
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 250px; /* Increased width */
+    }
+
+    .vegetable img {
+      width: 150px; /* Larger images */
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .vegetable p {
+      margin-top: 15px;
+      font-size: 1.6rem; /* Larger font size */
+      font-weight: bold;
+      color: #4B3C2A;
+    }
+
+    .vegetable:hover {
+      transform: translateY(-15px); /* Slightly larger hover effect */
+    }
+
+    /* Bouncing animation */
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      25% { transform: translateY(-15px); }
+      50% { transform: translateY(0); }
+      75% { transform: translateY(-7px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Add separation between sections */
+    .vegetable:nth-child(odd) {
+      background-color: #F9F4E6; /* Light yellowish background for odd items */
+    }
+
+    /* Responsive styling */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 3rem; /* Make title smaller on smaller screens */
+      }
+
+      .vegetable-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Adjust grid for small screens */
+        gap: 20px;
+      }
+
+      .vegetable img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .vegetable p {
+        font-size: 1.4rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Learn Vegetables Name</h1>
+    <div class="vegetable-grid">
+      <div class="vegetable" onclick="bounceEffect(this)">
+        <img src="https://imgs.search.brave.com/J5rMjTJN7oNhn3UEqBxNdablE74DXI-m7liJ2a4GJm4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAwLzcxLzM2LzAz/LzM2MF9GXzcxMzYw/Mzc2X0cwU0xObmdU/U05reU1yTGs1YXpW/UGJSWlBFNTZsWVBz/LmpwZw" alt="Carrot">
+        <p>Carrot</p>
+      </div>
+      <div class="vegetable" onclick="bounceEffect(this)">
+        <img src="https://imgs.search.brave.com/V3LOK4CR1ENHdYrG8G0MR0C8WAmv9S9cPPyRw_Ers78/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTE4/NDY0MDcvcGhvdG8v/dG9tYXRvLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1Bb1R5/cU82bjVKaEV5bFVl/a1hsbFRkbmlmSW1X/ZXc0Z1VFQTRzWFBv/MHFBPQ" alt="Tomato">
+        <p>Tomato</p>
+      </div>
+      <div class="vegetable" onclick="bounceEffect(this)">
+        <img src="https://imgs.search.brave.com/VpMGyn36ZBWO5QH77C3jQavqfG9sZJuiZwyNyYAw7lA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAzLzAwLzM0Lzgw/LzM2MF9GXzMwMDM0/ODA2MF9Pdk5raWZJ/WVBMcmpPNncwRVdX/UXhtVTAwUTEyTDBp/YS5qcGc" alt="Broccoli">
+        <p>Broccoli</p>
+      </div>
+      <div class="vegetable" onclick="bounceEffect(this)">
+        <img src="https://imgs.search.brave.com/hCseLTWdhh0Q0bUhB1lGqieGpeXYuIO6jHTirlmyJ6Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNDk3/MDY0MDA2L3Bob3Rv/L2ZyZXNoLWN1Y3Vt/YmVyLXNsaWNlcy1v/bi13b29kLWJhY2tn/cm91bmQuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPVFsOHRP/MkVOek1Nb1YtbldS/NFlJemhYYlRhbzdO/VFJJUi0tY2ROczZp/UXc9" alt="Cucumber">
+        <p>Cucumber</p>
+      </div>
+      <div class="vegetable" onclick="bounceEffect(this)">
+        <img src="https://imgs.search.brave.com/I8hiQhSSLI9yO1sldpDO-PUHIcY6kAL0NaUr_Q8n8CU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvODU2/MzY5MjIvcGhvdG8v/YnVuY2gtb2Ytc3Bp/bmFjaC5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9eTc4eTlL/MERiNTBJR0stbVlI/M3RCMXBxZnNWV1Q1/a09udWs3OGdHZjMx/MD0" alt="Spinach">
+        <p>Spinach</p>
+      </div>
+      <div class="vegetable" onclick="bounceEffect(this)">
+        <img src="https://imgs.search.brave.com/g6isnkUb3-DeG_Dbe2rKg7F3-jgucAlPcUY-lmqwlLo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9waG90b2dyYXBo/eS1vbmlvbi13aGl0/ZS1iYWNrZ3JvdW5k/XzEyODg2NTctNzA1/MDEuanBnP3NlbXQ9/YWlzX2h5YnJpZA" alt="Onion">
+        <p>Onion</p>
+      </div>
+      <div class="vegetable" onclick="bounceEffect(this)">
+        <img src="https://imgs.search.brave.com/js-bxwwU0cHEt9hQNeM2gpc8aBMYyDmcQtE2QS8KFFM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNDY4/NDg0NTE2L3Bob3Rv/L3BlcHBlci5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9SFdG/SkxXdldjN0NXQXBp/cGI4a2ZFQkIxV2J4/bm5FWG5kblN3c2w0/X29idz0" alt="Pepper">
+        <p>Pepper</p>
+      </div>
+      <div class="vegetable" onclick="bounceEffect(this)">
+        <img src="https://imgs.search.brave.com/A94v_wRWQeBVzwTAAWAdpNTBJRKTUwJ_ChfkASUGpSg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTUz/NDkxMjg2L3Bob3Rv/L2ZyZXNoLWxldHR1/Y2UuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPTNURlpYbG52/V3o0UEZTTVllNl9D/RjY0dk9TN2ctQzVT/RDB0ZDZza2tHYWc9" alt="Lettuce">
+        <p>Lettuce</p>
+      </div>
+      <div class="vegetable" onclick="bounceEffect(this)">
+        <img src="https://imgs.search.brave.com/W8iulFIFeqgUZ7-R-_xLbRZW0Fy1jb28jQJsn-AX1Mk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTU3/NDMwNjc4L3Bob3Rv/L3RocmVlLXBvdGF0/b2VzLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1xa01vRWdj/ajhadlliekRZRUpF/aGJRNTd2LW5ta0hT/N2U4OHE4ZHY3VFNB/PQ" alt="Potato">
+        <p>Potato</p>
+      </div>
+      <div class="vegetable" onclick="bounceEffect(this)">
+        <img src="https://imgs.search.brave.com/G1nRgs6xpE3voYGOP8Q6MoLe63NbSO-H99yfMz9C98s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTcx/MjY5NDA1L3Bob3Rv/L2VnZ3BsYW50cy5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/RU1KZU5KQm10SHd0/MnpzNnRUd1BSQjE4/VGE2bEcxQmtpSmdI/ampUSkhMUT0" alt="Eggplant">
+        <p>Eggplant</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function bounceEffect(element) {
+      element.style.animation = 'bounce 0.5s';
+      setTimeout(() => {
+        element.style.animation = '';
+      }, 500);
+    }
+  </script>
+</body>
+</html>
