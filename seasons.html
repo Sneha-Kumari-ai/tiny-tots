@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning About Seasons</title>
+  <style>
+    /* Reset some default styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fullscreen body setup */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #D0B097; /* light brown background */
+      color: #4B3C2A; /* dark brown text color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    /* Title styling */
+    h1 {
+      font-size: 4.5rem;
+      margin-bottom: 40px;
+      text-align: center;
+      font-weight: bold;
+      color: #4B3C2A;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Container for sections */
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 1200px;
+      align-items: center;
+      padding: 30px;
+      border-radius: 15px;
+      background-color: #F5E6D3; /* Cream background */
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      overflow: auto;
+      margin: 0 auto;
+    }
+
+    /* Section for each season */
+    .season {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      margin-bottom: 40px;
+      background-color: #FFF;
+      border: 3px solid #4B3C2A;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    /* Bouncing animation */
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      25% { transform: translateY(-15px); }
+      50% { transform: translateY(0); }
+      75% { transform: translateY(-7px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Style for images inside each season */
+    .season img {
+      width: 250px; /* Larger images */
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Styling for the season name */
+    .season p {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #4B3C2A;
+    }
+
+    /* Hover effect for seasons */
+    .season:hover {
+      transform: translateY(-10px);
+      animation: bounce 0.5s;
+    }
+
+    /* Styling for season descriptions */
+    .season-description {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      color: #4B3C2A;
+      margin-top: 10px;
+      text-align: justify;
+    }
+
+    /* Responsive design for small devices */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 3rem;
+      }
+
+      .season img {
+        width: 180px;
+        height: 180px;
+      }
+
+      .season p {
+        font-size: 1.5rem;
+      }
+
+      .season-description {
+        font-size: 1rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Learning About Seasons</h1>
+
+    <!-- Spring Section -->
+    <div class="season" onclick="bounceEffect(this)">
+      <img src="https://imgs.search.brave.com/uXqw6kecqwlPVwL5ColWfakPS5RIW3uet1xkJhqmDug/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTIy/MDQ4Mzg0MS9waG90/by9jaGVycnktYmxv/c3NvbS1uZXcteW9y/ay5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9RHNzdkcwR1hO/WFRwbXZ6YTltdUdJ/Ym9XdGdoSVN0MTNT/TERlX2FZZU1nWT0" alt="Spring">
+      <p>Spring</p>
+      <div class="season-description">
+        Spring is the season of growth and renewal. Flowers bloom, animals wake from hibernation, and the weather starts to warm up.
+      </div>
+    </div>
+
+    <!-- Summer Section -->
+    <div class="season" onclick="bounceEffect(this)">
+      <img src="https://imgs.search.brave.com/avQmicvLnef-6y3NGBeFr4FNWiX1dLC_tNaBZ9gJ0Vs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQvc3VtbWVyLXNl/YXNvbi1waWN0dXJl/cy04ZGU0eTcxOGt0/dXhzcXZiLmpwZw" alt="Summer">
+      <p>Summer</p>
+      <div class="season-description">
+        Summer is the warmest season of the year. Days are longer, and people often go on vacation to enjoy the sunny weather, beaches, and outdoor activities.
+      </div>
+    </div>
+
+    <!-- Autumn Section -->
+    <div class="season" onclick="bounceEffect(this)">
+      <img src="https://imgs.search.brave.com/o4_Cg0Ag9K0R0uKKTnHmWRTqYVXwNEKbAJepbI1_Ric/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2htZy1wcm9k/L2ltYWdlcy9mYWxs/LXBpY3R1cmVzLXRh/YmxlLTY1MTFjNDI1/NWU2OGEuanBnP2Ny/b3A9MS4wMHh3OjAu/ODM1eGg7MCwwLjE1/MHhoJnJlc2l6ZT05/ODA6Kg" alt="Autumn">
+      <p>Autumn</p>
+      <div class="season-description">
+        Autumn, also known as fall, is when the weather starts to cool down. Leaves change colors, and it’s a time for harvest before winter.
+      </div>
+    </div>
+
+    <!-- Winter Section -->
+    <div class="season" onclick="bounceEffect(this)">
+      <img src="https://imgs.search.brave.com/9uhsHJCCLOsRQx9V9HTO6QpbONRGuK4OF3l8qmW9aNE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxOC8x/MC8xOS8xMi8xNC90/cmFpbi0zNzU4NTIz/XzEyODAuanBn" alt="Winter">
+      <p>Winter</p>
+      <div class="season-description">
+        Winter is the coldest season. Snow often falls, and people engage in winter sports like skiing and ice skating. It's also a time for cozy gatherings indoors.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function bounceEffect(element) {
+      element.style.animation = 'bounce 0.5s';
+      setTimeout(() => {
+        element.style.animation = ''; // Reset animation after it completes
+      }, 500);
+    }
+  </script>
+</body>
+</html>
