@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weeks Name and Its Learning</title>
+  <style>
+    /* Reset some default styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fullscreen body setup */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #D0B097; /* light brown background */
+      color: #4B3C2A; /* dark brown text color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Title styling */
+    h1 {
+      font-size: 4.5rem;
+      margin-bottom: 40px;
+      text-align: center;
+      font-weight: bold;
+      color: #4B3C2A;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Container for sections */
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 1200px;
+      align-items: center;
+      padding: 30px;
+      border-radius: 15px;
+      background-color: #F5E6D3; /* Cream background */
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      overflow: auto;
+      margin: 0 auto;
+    }
+
+    /* Section for each day of the week */
+    .day {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      margin-bottom: 40px;
+      background-color: #FFF;
+      border: 3px solid #4B3C2A;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    /* Bouncing animation */
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      25% { transform: translateY(-15px); }
+      50% { transform: translateY(0); }
+      75% { transform: translateY(-7px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Styling for the day name */
+    .day p {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #4B3C2A;
+    }
+
+    /* Hover effect for days */
+    .day:hover {
+      transform: translateY(-10px);
+      animation: bounce 0.5s;
+    }
+
+    /* Styling for day descriptions */
+    .day-description {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      color: #4B3C2A;
+      margin-top: 10px;
+      text-align: justify;
+    }
+
+    /* Responsive design for small devices */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 3rem;
+      }
+
+      .day p {
+        font-size: 1.5rem;
+      }
+
+      .day-description {
+        font-size: 1rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Weeks Name and Its Learning</h1>
+
+    <!-- Monday Section -->
+    <div class="day" onclick="bounceEffect(this)">
+      <p>Monday</p>
+      <div class="day-description">
+        Monday is the first day of the workweek. It's a fresh start, often associated with new beginnings and opportunities. Many people feel motivated to start their week on a positive note.
+      </div>
+    </div>
+
+    <!-- Tuesday Section -->
+    <div class="day" onclick="bounceEffect(this)">
+      <p>Tuesday</p>
+      <div class="day-description">
+        Tuesday is the second day of the week. It’s often seen as a productive day, where people settle into their weekly routine and continue the tasks they started on Monday.
+      </div>
+    </div>
+
+    <!-- Wednesday Section -->
+    <div class="day" onclick="bounceEffect(this)">
+      <p>Wednesday</p>
+      <div class="day-description">
+        Wednesday is known as "hump day," as it marks the middle of the workweek. It’s a day when people reflect on the progress they’ve made and start preparing for the rest of the week.
+      </div>
+    </div>
+
+    <!-- Thursday Section -->
+    <div class="day" onclick="bounceEffect(this)">
+      <p>Thursday</p>
+      <div class="day-description">
+        Thursday is the fourth day of the week. It’s often a day when people start to wrap up their tasks before the weekend. It’s also a day to prepare for upcoming projects.
+      </div>
+    </div>
+
+    <!-- Friday Section -->
+    <div class="day" onclick="bounceEffect(this)">
+      <p>Friday</p>
+      <div class="day-description">
+        Friday is the last day of the workweek. It’s a day full of excitement for the weekend ahead, where people finish their work and look forward to relaxation or fun activities.
+      </div>
+    </div>
+
+    <!-- Saturday Section -->
+    <div class="day" onclick="bounceEffect(this)">
+      <p>Saturday</p>
+      <div class="day-description">
+        Saturday is a day of rest and leisure for many people. It’s a day to spend time with family and friends, pursue hobbies, or relax from the workweek.
+      </div>
+    </div>
+
+    <!-- Sunday Section -->
+    <div class="day" onclick="bounceEffect(this)">
+      <p>Sunday</p>
+      <div class="day-description">
+        Sunday is a day of relaxation and preparation for the upcoming week. Many people use this day to recharge, reflect, or enjoy outdoor activities before the workweek begins again.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Function to trigger the bounce effect when clicked
+    function bounceEffect(element) {
+      element.style.animation = 'bounce 0.5s';
+      setTimeout(() => {
+        element.style.animation = ''; // Reset animation after it completes
+      }, 500);
+    }
+  </script>
+</body>
+</html>
