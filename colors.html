@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Learning</title>
+</head>
+<body style="background-color: #d2b48c; font-family: Arial, sans-serif; color: #4e342e; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 20px;">
+
+  <h1 style="font-size: 3em; color: #3e2723;">Color Learning</h1>
+  <p style="font-size: 1.5em;">Click on each color to explore it!</p>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1400px;">
+
+    <!-- Define CSS for bounce animation and larger cards -->
+    <style>
+      .color-card {
+        background-color: #8d6e63;
+        padding: 30px;
+        border-radius: 15px;
+        width: 200px;
+        text-align: center;
+        transition: transform 0.2s;
+      }
+
+      .color-card img {
+        width: 100px;
+        height: 100px;
+      }
+
+      /* Bounce effect on hover */
+      .color-card:hover {
+        transform: scale(1.1) translateY(-12px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      .color-card h2 {
+        font-size: 1.8em;
+        color: #fff;
+      }
+
+      /* Custom colors */
+      .red { background-color: #ff0000; }
+      .blue { background-color: #6666ff; }
+      .green { background-color: #66ff66; }
+      .yellow { background-color: #ffff66; color: #333; }
+      .purple { background-color: #c166ff; }
+      .orange { background-color: #ffb266; }
+      .pink { background-color: #ff66b2; }
+      .brown { background-color: #a52a2a; }
+      .gray { background-color: #808080; }
+      .black { background-color: #333333; }
+      .white { background-color: #f2f2f2; color: #333; }
+    </style>
+
+    <!-- Each color card -->
+    <a href="#" style="text-decoration: none;">
+      <div class="color-card red">
+        <h2>Red</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRXoppMAyW5fxWzE-JU4louT-oSiEwaMc8Fg&s" alt="Red">
+      </div>
+    </a>
+
+    <a href="#" style="text-decoration: none;">
+      <div class="color-card blue">
+        <h2>Blue</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq6DV4xFulqKHJKWIGuz3Qmlb5zO4aOkcnAA&s" alt="Blue">
+      </div>
+    </a>
+
+    <a href="#" style="text-decoration: none;">
+      <div class="color-card green">
+        <h2>Green</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQczCYngQPO0Yos9smu1A1z3btQa7RE05RzLQ&s" alt="Green">
+      </div>
+    </a>
+
+    <a href="#" style="text-decoration: none;">
+      <div class="color-card yellow">
+        <h2>Yellow</h2>
+        <img src="https://img.freepik.com/free-vector/yellow-capsicum-sticker-white_1308-60707.jpg" alt="Yellow">
+      </div>
+    </a>
+
+    <a href="#" style="text-decoration: none;">
+      <div class="color-card purple">
+        <h2>Purple</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGNa43Zplu4_Jaxbpzs3vAFoupIkkyTpEwew&s" alt="Purple">
+      </div>
+    </a>
+
+    <a href="#" style="text-decoration: none;">
+      <div class="color-card orange">
+        <h2>Orange</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOImS25oRfzd7KQ8ur_UnC5YAnhPz873EE9g&s" alt="Orange">
+      </div>
+    </a>
+
+    <a href="#" style="text-decoration: none;">
+      <div class="color-card pink">
+        <h2>Pink</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiWrm7bNDzRV_uzeWO0njto-qynxIOIjSgNyID0oKVMQNeopfEN2-zXpT1taoxF3SV24c&usqp=CAU" alt="Pink">
+      </div>
+    </a>
+
+    <a href="#" style="text-decoration: none;">
+      <div class="color-card brown">
+        <h2>Brown</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsoV2DwoHTP0u3GMVWD156Vyx9340b8qnDYw&s" alt="Brown">
+      </div>
+    </a>
+
+    <a href="#" style="text-decoration: none;">
+      <div class="color-card gray">
+        <h2>Gray</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2__dFuTHg0cWHP7mgUYHz9XAnIEs-oyiJpQ&s" alt="Gray">
+      </div>
+    </a>
+
+    <a href="#" style="text-decoration: none;">
+      <div class="color-card black">
+        <h2>Black</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp5rhUhEsNbWOKIybcpFF6FJE_QcIwVgpPpg&s" alt="Black">
+      </div>
+    </a>
+
+    <a href="#" style="text-decoration: none;">
+      <div class="color-card white">
+        <h2>White</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQPEO5TMryDBPRLtjJ3NVktDc96fU1ibK4kw&s" alt="White">
+      </div>
+    </a>
+
+  </div>
+</body>
+</html>
